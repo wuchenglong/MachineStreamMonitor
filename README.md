@@ -25,8 +25,8 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 
 ### Prerequisites
 
-1. rabbitmq server windows
-1. mongodb for windows
+1. rabbitmq
+1. mongodb
 
 #### Install rabbitmq on Docker
 1. Search rabbitmq images on docker
@@ -139,7 +139,7 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 
 ### Run ExposeDataService on docker
 
-1. Config the rabbitmq settings in the file of appsettings.json under the project, especially replace the IP with your host.
+1. Config the rabbitmq and mongodb settings in the file of appsettings.json under the project, especially replace the IP with your host.
 
 ``` c#
     "MQSettings": {
@@ -160,10 +160,10 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
  2. Zip the project and upload it to the centOS via MobaXterm then unzip it
 
  ``` docker command
-# unzip "/zip/MachineStream/IngestDataService.zip"
+# unzip "/zip/MachineStream/ExposeDataService.zip"
 ```
 
-3. Change the directory to the project and Build this service image
+3. Change the directory to the project and build this service image
 
  ``` docker command
 # cd ExposeDataService

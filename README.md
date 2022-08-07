@@ -1,11 +1,9 @@
 # MachineStreamMonitor
  
 ## Solution for [backend](http://codingcase.zeiss.services/?type=backend)
------
 
 This document explains how to implement the solution for prototypical backend use .net microservice. Based on the circumstances of monitoring assets remotely in near real-time, we use microservice and MQ to reinforce the reliability and scaling solution. There have two architectures as planned. 
 
----
 
 ## Architecture
 

@@ -13,13 +13,13 @@ This document explains how to implement the solution for prototypical backend us
 
 We split the functions of ingesting and storing, exposing the data as two microservices. Ingest data service will force on receive data from a WebSocket connection. It will enqueue the data immediately once WebSocket has data. Another service named expose data service will consume and store the data from the queue. We plan to use Azure SQL, but it seems too expensive for this smart maintenance solution.
 
-![PlanA](Picture/PlanA.png)
+![PlanA](https://ms01.blob.core.windows.net/picture/PlanA.png)
 
 ```Plan B```: 
 
 We plan to use MongoDB and add a gateway to redirect the routes of these requests. So there will have five images in the docker container without Azure resources. 
 
-![PlanB](Picture/PlanB.png)
+![PlanB](https://ms01.blob.core.windows.net/picture/PlanB.png)
 
 ## Run on CentOS (Linux)
 
@@ -34,21 +34,21 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 ``` docker command
 # docker search rabbitmq
 ```
-![rabbitmq1](Picture/rabbitmq1.png)
+![rabbitmq1](https://ms01.blob.core.windows.net/picture/rabbitmq1.png)
 
 2. Install the latest rabbitmq images on docker
 
 ``` docker command
 # docker pull rabbitmq
 ```
-![rabbitmq2](Picture/rabbitmq2.png)
+![rabbitmq2](https://ms01.blob.core.windows.net/picture/rabbitmq2.png)
 
 3. Run image of rabbitmq on docker
 
 ``` docker command
 # docker run -d --name rabbit -p 15672:15672 -p 5673:5672 rabbitmq
 ```
-![rabbitmq3](Picture/rabbitmq3.png)
+![rabbitmq3](https://ms01.blob.core.windows.net/picture/rabbitmq3.png)
 
 #### Install MongoDB on Docker
 1. Search mongo images on docker
@@ -56,14 +56,14 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 ``` docker command
 # docker search mongo
 ```
-![mongo1](Picture/mongo1.png)
+![mongo1](https://ms01.blob.core.windows.net/picture/mongo1.png)
 
 2. Install the latest mongo images on docker
 
 ``` docker command
 # docker pull mongo:latest
 ```
-![mongo2](Picture/mongo2.png)
+![mongo2](https://ms01.blob.core.windows.net/picture/mongo2.png)
 
 3. Run image of mongo on docker
 
@@ -99,7 +99,7 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
  ``` docker command
 # unzip "/zip/MachineStream/IngestDataService.zip"
 ```
-![IN2](Picture/IN1.png)
+![IN2](https://ms01.blob.core.windows.net/picture/IN1.png)
 
 3. Change the directory to the project and Build this service image
 
@@ -107,7 +107,7 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 # cd IngestDataService
 # docker build -t ingestdataservice:dev .
 ```
-![IN3](Picture/IN3.png)
+![IN3](https://ms01.blob.core.windows.net/picture/IN3.png)
 
 4. Run this service image and check the status
 
@@ -118,7 +118,7 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 
 5. Verify this service when typing the URI in the browser. Note, please use your IP address instead.
 
-![IN5](Picture/IN5.png)
+![IN5](https://ms01.blob.core.windows.net/picture/IN5.png)
 
 6. Send the JSON data to Ingest Data Service via Postman with a WebSocket connection to ws://192.168.1.65:8008/ws
 
@@ -135,7 +135,7 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
   "event": "new"
 }
 ```
-![IN6](Picture/IN6.png)
+![IN6](https://ms01.blob.core.windows.net/picture/IN6.png)
 
 ### Run ExposeDataService on docker
 
@@ -179,8 +179,8 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 
 5. Verify this service when typing the URI in the browser. Note, please use your IP address instead.
 Here is the API expose and one request:
-![EX5](Picture/EX5.png)
-![EX6](Picture/EX6.png)
+![EX5](https://ms01.blob.core.windows.net/picture/EX5.png)
+![EX6](https://ms01.blob.core.windows.net/picture/EX6.png)
 
 ### Run MachineStreamGateway on docker
 
@@ -249,6 +249,6 @@ Here is the API expose and one request:
 
 5. Verify this service when typing the URI in the Postman and browser. Note, please use your IP address instead.
 
-![GW1](Picture/GW1.png)
-![GW2](Picture/GW2.png)
-![GW3](Picture/GW3.png)
+![GW1](https://ms01.blob.core.windows.net/picture/GW1.png)
+![GW2](https://ms01.blob.core.windows.net/picture/GW2.png)
+![GW3](https://ms01.blob.core.windows.net/picture/GW3.png)

@@ -179,8 +179,8 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 
 5. Verify this service when typing the URI in the browser. Note, please use your IP address instead.
 Here is the API expose and one request:
-![IN5](Picture/ex5.png)
-![IN6](Picture/ex6.png)
+![EX5](Picture/EX5.png)
+![EX6](Picture/EX6.png)
 
 ### Run MachineStreamGateway on docker
 

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dQByKQzQd63NsLx9yRSiIQfchA8JbTM/tSiAgdioAkM=",
+  "Source": "IngestDataService",
+  "BasePath": "_content/IngestDataService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

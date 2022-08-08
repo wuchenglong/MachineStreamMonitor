@@ -11,7 +11,7 @@ This document explains how to implement the solution for prototypical backend us
 
 We split the functions of ingesting and storing, exposing the data as two microservices. Ingest data service will force on receive data from a WebSocket connection. It will enqueue the data immediately once WebSocket has data. Another service named expose data service will consume and store the data from the queue. We plan to use Azure SQL, but it seems too expensive for this smart maintenance solution.
 
-![PlanA](https://ms01.blob.core.windows.net/picture/PlanA.png)
+![PlanA](https://ms01.blob.core.windows.net/picture/PlanAzure.png)
 
 ```Plan B```: 
 
@@ -114,7 +114,7 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 # docker ps -a
 ```
 
-5. Verify this service when typing the URI in the browser. Note, please use your IP address instead.
+5. Verify this service when typing the URL in the browser. Note, please use your IP address instead.
 
 ![IN5](https://ms01.blob.core.windows.net/picture/IN5.png)
 
@@ -175,7 +175,7 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 # docker ps -a
 ```
 
-5. Verify this service when typing the URI in the browser. Note, please use your IP address instead.
+5. Verify this service when typing the URL in the browser. Note, please use your IP address instead.
 Here is the API expose and one request:
 ![EX5](https://ms01.blob.core.windows.net/picture/EX5.png)
 ![EX6](https://ms01.blob.core.windows.net/picture/EX6.png)
@@ -245,7 +245,7 @@ Here is the API expose and one request:
 # docker ps -a
 ```
 
-5. Verify this service when typing the URI in the Postman and browser. Note, please use your IP address instead.
+5. Verify this service when typing the URL in the Postman and browser. Note, please use your IP address instead.
 
 ![GW1](https://ms01.blob.core.windows.net/picture/GW1.png)
 ![GW2](https://ms01.blob.core.windows.net/picture/GW2.png)

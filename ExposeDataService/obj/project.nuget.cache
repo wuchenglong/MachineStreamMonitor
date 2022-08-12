@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T793QUV1J3bGk/MWZViXzzMi+2zULBIeP1/t6G4hPlWlODevghLQ6+w0aU47SUsGcrFdOMlYik1blifwN/WduQ==",
+  "dgSpecHash": "FoPiOwbPFJOr115nnRfg3soahM8S4DXZ18UwFRAf4FZrBhPdp7U6vcGizv0mn5c3BTW7AIslrRqHZL9rLEQQDg==",
   "success": true,
-  "projectFilePath": "C:\\code\\Backend\\MachineStreamMonitor\\ExposeDataService\\ExposeDataService.csproj",
+  "projectFilePath": "C:\\work\\GitHub\\MachineStreamMonitor\\ExposeDataService\\ExposeDataService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\masstransit\\8.0.6-develop.539\\masstransit.8.0.6-develop.539.nupkg.sha512",

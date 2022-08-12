@@ -19,7 +19,7 @@ We plan to use MongoDB and add a gateway to redirect the routes of these request
 
 ![PlanB](https://ms01.blob.core.windows.net/picture/PlanB.png)
 
-## Run on CentOS (Linux)
+## Run on CentOS (Linux) from MobaXterm
 
 ### Prerequisites
 
@@ -250,3 +250,120 @@ Here is the API expose and one request:
 ![GW1](https://ms01.blob.core.windows.net/picture/GW1.png)
 ![GW2](https://ms01.blob.core.windows.net/picture/GW2.png)
 ![GW3](https://ms01.blob.core.windows.net/picture/GW3.png)
+
+## Run on CentOS (Linux) from Docker Hub
+
+### Install mongo on Docker
+
+1. Get and install the latest version of mongo from Docker Hub
+
+```
+docker pull mongo:latest
+docker run -itd --name mongo -p 27017:27017 mongo --auth
+```
+
+2. Setup account for the mongo database
+
+```
+docker exec -it mongo mongo admin
+>  db.createUser({ user:'root',pwd:'example',roles:[ { role:'userAdminAnyDatabase', db: 'admin'},"readWriteAnyDatabase"]});
+>  db.auth('root', 'example')
+```
+
+### Install rabbitmq on Docker
+
+1. Get the latest version of rabbitmq from Docker Hub
+
+```
+docker pull rabbitmq:management
+```
+
+2. Run rabbitmq image using default settings
+
+```
+docker run -itd --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
+```
+
+### Install ingestdataservice on Docker
+
+1. Get the latest version of ingestdataservice from Docker Hub (Note, There use the specified IP for the connection string. Please make sure the IP of the host is 192.168.1.65.)
+
+```
+docker pull byronwu12345/ingestdataservice:192.168.1.65
+```
+
+2. Run the image using port 8008 and 8009.
+
+```
+docker run -itd --name ingestdataservice -p 8008:80 -p 8009:443 byronwu12345/ingestdataservice:192.168.1.65
+```
+
+### Install exposedataservice on Docker
+
+1. Get the latest version of exposedataservice from Docker Hub (Note, There use the specified IP for the connection string. Please make sure the IP of the host is 192.168.1.65.)
+
+```
+docker pull byronwu12345/exposedataservice:192.168.1.65
+```
+
+2. Run the image using port 8008 and 8009.
+
+```
+docker run -itd --name exposedataservice -p 8080:80 -p 8081:443 byronwu12345/exposedataservice:192.168.1.65
+```
+
+### Install machinestreamgateway on Docker
+
+1. Get the latest version of ingestdataservice from Docker Hub (Note, There use the specified IP for the connection string. Please make sure the IP of the host is 192.168.1.65.)
+
+```
+docker pull byronwu12345/machinestreamgateway:192.168.1.65
+```
+
+2. Run the image using port 8008 and 8009.
+
+```
+docker run -itd --name machinestreamgateway -p 8088:443 -p 8089:80 byronwu12345/machinestreamgateway:192.168.1.65
+```
+
+### Verify the result
+
+1. Review the containers after installed
+```
+docker ps -a
+```
+![DockerHub01](https://ms01.blob.core.windows.net/picture/DockerHub01.png)
+
+2. Verify the ingest function from Postman
+```
+ws://192.168.1.65:8089/ws
+
+{
+  "topic": "events",
+  "ref": null,
+  "payload": {
+    "machine_id": "59d9f4b4-018f-43d8-92d0-c51de7d987e5",
+    "id": "41bb0908-15ba-4039-8c4f-8b7b99260kkk",
+    "timestamp": "2017-04-16T19:42:26.542614Z",
+    "status": "running"
+  },
+  "event": "new"
+}
+
+```
+![DockerHub02](https://ms01.blob.core.windows.net/picture/DockerHub02.png)
+
+3. Get data from the ingest function from Postman
+```
+http://192.168.1.65:8089/MachineStream
+
+http://192.168.1.65:8089/MachineStream/41bb0908-15ba-4039-8c4f-8b7b99260kkk
+```
+![DockerHub03](https://ms01.blob.core.windows.net/picture/DockerHub03.png)
+
+## Note the tag of winmac of the images can run on Windows and Mac without specified IP.
+
+```
+docker pull byronwu12345/ingestdataservice:winmac
+docker pull byronwu12345/exposedataservice:winmac
+```

@@ -3786,11 +3786,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\Backend\\MachineStreamMonitor\\IngestDataService\\IngestDataService.csproj",
+      "projectUniqueName": "C:\\work\\GitHub\\MachineStreamMonitor\\IngestDataService\\IngestDataService.csproj",
       "projectName": "IngestDataService",
-      "projectPath": "C:\\code\\Backend\\MachineStreamMonitor\\IngestDataService\\IngestDataService.csproj",
+      "projectPath": "C:\\work\\GitHub\\MachineStreamMonitor\\IngestDataService\\IngestDataService.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\Backend\\MachineStreamMonitor\\IngestDataService\\obj\\",
+      "outputPath": "C:\\work\\GitHub\\MachineStreamMonitor\\IngestDataService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

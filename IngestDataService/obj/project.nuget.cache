@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yKjv4Bkh8TjW3tXx2SpVEqWu+IXyYJd4O6PWalI5lUTKc3M1Q3/ir7LvoLYauEvQLvOc0OzEyKOoidjcH1fL8A==",
+  "dgSpecHash": "8qIdid7LI65J4ddPJawM7IXWfls0RCnebCg8krRklVSlhQraMu8Ba25NIjfEZQ1IMAMDBqKYSrqRcFvWvYHmjQ==",
   "success": true,
-  "projectFilePath": "C:\\code\\Backend\\MachineStreamMonitor\\IngestDataService\\IngestDataService.csproj",
+  "projectFilePath": "C:\\work\\GitHub\\MachineStreamMonitor\\IngestDataService\\IngestDataService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\masstransit\\8.0.6-develop.539\\masstransit.8.0.6-develop.539.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\masstransit.abstractions\\8.0.6-develop.539\\masstransit.abstractions.8.0.6-develop.539.nupkg.sha512",

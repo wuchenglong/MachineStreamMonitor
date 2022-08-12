@@ -14,7 +14,7 @@
     },
     {
       "DownstreamPathTemplate": "/api/MachineStream",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "192.168.1.65",
@@ -26,7 +26,7 @@
     },
     {
       "DownstreamPathTemplate": "/api/MachineStream/{id}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "192.168.1.65",

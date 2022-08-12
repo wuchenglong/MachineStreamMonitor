@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  machinestreamgateway:
+    image: ${DOCKER_REGISTRY-}machinestreamgateway
+    build:
+      context: .
+      dockerfile: Dockerfile

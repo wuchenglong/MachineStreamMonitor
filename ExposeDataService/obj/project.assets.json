@@ -4118,11 +4118,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\Backend\\MachineStreamMonitor\\ExposeDataService\\ExposeDataService.csproj",
+      "projectUniqueName": "C:\\work\\GitHub\\MachineStreamMonitor\\ExposeDataService\\ExposeDataService.csproj",
       "projectName": "ExposeDataService",
-      "projectPath": "C:\\code\\Backend\\MachineStreamMonitor\\ExposeDataService\\ExposeDataService.csproj",
+      "projectPath": "C:\\work\\GitHub\\MachineStreamMonitor\\ExposeDataService\\ExposeDataService.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\Backend\\MachineStreamMonitor\\ExposeDataService\\obj\\",
+      "outputPath": "C:\\work\\GitHub\\MachineStreamMonitor\\ExposeDataService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

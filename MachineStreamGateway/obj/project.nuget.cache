@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1lolJn/k1V00o8CgKPbjj5/8fDvUlleojNj+VF+AgriSGrnsw1jSmHjisMrKscYe7QKro+t/86bedBM02SdnGw==",
+  "dgSpecHash": "qW1Tt76g9WnMVx42UEwwY3SQMHCVNaIeGKHOHQPAciVCrhwMYpPUmipHE3hOqoG3hORKvam3OpFQ7RxakXJTog==",
   "success": true,
-  "projectFilePath": "C:\\code\\Backend\\MachineStreamMonitor\\MachineStreamGateway\\MachineStreamGateway.csproj",
+  "projectFilePath": "C:\\work\\GitHub\\MachineStreamMonitor\\MachineStreamGateway\\MachineStreamGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\cachemanager.core\\2.0.0-beta-1629\\cachemanager.core.2.0.0-beta-1629.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\cachemanager.microsoft.extensions.configuration\\2.0.0-beta-1629\\cachemanager.microsoft.extensions.configuration.2.0.0-beta-1629.nupkg.sha512",

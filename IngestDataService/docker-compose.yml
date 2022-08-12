@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  ingestdataservice:
+    image: ${DOCKER_REGISTRY-}ingestdataservice
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8008:80
+      - 8009:443
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - 5672:5672
+      - 15672:15672
